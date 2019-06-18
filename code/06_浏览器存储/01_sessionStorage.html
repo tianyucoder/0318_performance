@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<button id="btn1">保存数据</button>
+<button id="btn2">读取数据</button>
+<button id="btn3">删除数据</button>
+
+<script type="text/javascript">
+      let p = {name: 'kobe'};
+      
+      let btn1 = document.getElementById('btn1');
+      let btn2 = document.getElementById('btn2');
+      let btn3 = document.getElementById('btn3');
+      
+      //设置sessionStorage
+      btn1.onclick = function () {
+        sessionStorage.setItem('person_info',JSON.stringify(p))
+      }
+      
+      //读取sessionStorage
+      btn2.onclick = function () {
+        let res = sessionStorage.getItem('person_info')
+        console.log(res)
+      }
+
+      //删除sessionStorage
+      btn3.onclick = function () {
+        sessionStorage.removeItem('person_info')
+      }
+
+</script>
+</body>
+</html>

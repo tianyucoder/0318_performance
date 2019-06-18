@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<button id="btn1">保存数据</button>
+<button id="btn2">读取数据</button>
+<button id="btn3">删除数据</button>
+<button id="btn4">清空数据</button>
+
+<script type="text/javascript">
+    // 设置localStorage
+    let p = {name: 'kobe'};
+    
+    let btn1 = document.getElementById('btn1');
+    let btn2 = document.getElementById('btn2');
+    let btn3 = document.getElementById('btn3');
+    let btn4 = document.getElementById('btn4');
+    
+    //存储数据
+    btn1.onclick = function () {
+      localStorage.setItem('person_info', JSON.stringify(p))
+    }
+
+    // 读取数据
+    btn2.onclick = function () {
+      let result = localStorage.getItem('person')
+      console.log(result, typeof result); // {"name":"kobe"} string
+    }
+
+    // 删除数据
+    btn3.onclick = function () {
+      let result = localStorage.removeItem('person')
+    }
+
+    // 清空
+    btn4.onclick = function () {
+      localStorage.clear();
+    }
+</script>
+</body>
+</html>

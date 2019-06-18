@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<img src="img/01.jpg"/>
+	</body>
+	<script type="text/javascript">
+    const arr = [];
+    for (let i = 0; i < 100000000; i++) {
+      arr.push(i);
+      arr.splice(i % 3, i % 7, i % 5);
+    }
+	</script>
+</html>
