@@ -13,7 +13,7 @@
 
 <script type="text/javascript">
     // 设置localStorage
-    let p = {name: 'kobe'};
+    let p = {name: 'kobe',age:18};
     
     let btn1 = document.getElementById('btn1');
     let btn2 = document.getElementById('btn2');
@@ -23,17 +23,18 @@
     //存储数据
     btn1.onclick = function () {
       localStorage.setItem('person_info', JSON.stringify(p))
+      localStorage.setItem('person_info2', JSON.stringify(p))
     }
 
     // 读取数据
     btn2.onclick = function () {
-      let result = localStorage.getItem('person')
+      let result = localStorage.getItem('person_info')
       console.log(result, typeof result); // {"name":"kobe"} string
     }
 
     // 删除数据
     btn3.onclick = function () {
-      let result = localStorage.removeItem('person')
+      let result = localStorage.removeItem('person_info')
     }
 
     // 清空

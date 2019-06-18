@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<input type="text" id="val">
+<input type="text" id="input">
 <script type="text/javascript">
     /*
     * storage事件：
@@ -22,9 +22,11 @@
 
     // 问题： 如何修改一个页面的数据，另一个页面能够及时响应， 如：电商网站的多个页面之间如何通信
 
-  document.getElementById('val').onblur = function () {
+  document.getElementById('input').onblur = function () {
     localStorage.setItem('demo',this.value)
   }
+  
+  console.log(Date.now())
 </script>
 </body>
 </html>

@@ -11,7 +11,7 @@
 <button id="btn3">删除数据</button>
 
 <script type="text/javascript">
-      let p = {name: 'kobe'};
+      let p = {name: 'kobe',age:18};
       
       let btn1 = document.getElementById('btn1');
       let btn2 = document.getElementById('btn2');
@@ -25,7 +25,7 @@
       //读取sessionStorage
       btn2.onclick = function () {
         let res = sessionStorage.getItem('person_info')
-        console.log(res)
+        console.log(res,typeof res)
       }
 
       //删除sessionStorage
